@@ -1,16 +1,30 @@
+html {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-family: 'Handjet', sans-serif;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #333, #ccc);
+    background: linear-gradient(to top, #001552, #2b1d38);
+}
+
+.header {
+    background-color: #2d2d2d;
+    padding: 1%;
+    text-align: center;
+    margin: 0px;
+    height: 60px;
 }
 
 .navbar {
-    background-color: #222;
+    background: linear-gradient(#041547, #342444);
     padding: 1%;
     text-align: center;
     margin: 0px 0px 50px 0px;
+    padding: 15px;
 }
 
 .navbar a {
@@ -21,11 +35,72 @@ body {
     text-decoration: none;
 }
 
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 .content {
-    text-align: center;
+    width: 50%;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f8f8f8;
-    margin: 60px auto;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    background: linear-gradient(to right, #000b2b, #342444);
+    color: aliceblue;
+    margin: 30px auto;
+    transition: max-width 0.3s, -webkit-transform 0.3s;
+    transition: max-width 0.3s, transform 0.3s;
+}
+
+.content:hover {
+    max-width: 60%;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.title {
+    font-size: xxx-large;
+    color: white;
+}
+
+footer {
+    background: linear-gradient(#041547, #342444);
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: white;
+    border-top: 2px solid white;
+}
+
+@media only screen and (min-width: 0px) {
+    body {
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        width: 100%;
+    }
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(/images/purple\ banner.jpg);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
